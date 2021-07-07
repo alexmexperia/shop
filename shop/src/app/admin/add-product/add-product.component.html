@@ -1,0 +1,39 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+    <h2>Add New Product</h2>
+
+    <div class="form-control">
+        <label for="type">Type</label>
+        <select formControlName="type">
+            <option>Mobile</option>
+            <option>Laptop</option>
+            <option>Notebook</option>
+            <option>Camera</option>
+        </select>
+    </div>
+
+    <div class="form-control">
+        <label for="title">Name</label>
+        <input id="title" type="title" formControlName="title">    
+    </div>
+
+    <div class="form-control">
+        <label for="image">Image</label>
+        <quill-editor formControlName="image"></quill-editor>
+    </div>
+
+    <div class="form-control">
+        <label for="description">Description</label>
+        <quill-editor formControlName="description"></quill-editor> 
+    </div>
+
+    <div class="form-control">
+        <label for="price">Price</label>
+        <input id="price" type="description" formControlName="price">    
+    </div>
+
+
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submited">Add Product</button>
+    
+
+</form>

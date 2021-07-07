@@ -1,0 +1,12 @@
+.btn {
+  margin: 1rem 0.5rem 0;
+  width: 80%;
+}
+.item {
+  margin-top: 2rem !important;
+  padding: 5px;
+  border: 1px solid black;
+  max-width: 100%;
+  display: flex;
+  justify-self: center;
+}

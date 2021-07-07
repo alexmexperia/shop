@@ -1,0 +1,61 @@
+<nav class="navbar bg-dark">
+   
+    <div class="logo">
+        <a (click)="setType('Mobile')">
+             <img src="assets/img/logo.png">
+        </a>
+       
+    </div>
+
+    <ul class="navbar__catalog">
+        <li routerLinkActive = "active">
+            <a (click)="setType('Mobile')">Mobile</a>
+        </li>
+        <li routerLinkActive = "active">
+            <a (click)="setType('Laptop')">Laptop</a>
+        </li>
+        <li routerLinkActive = "active">
+            <a (click)="setType('Notebook')">Notebook</a>
+        </li>
+        <li routerLinkActive = "active">
+            <a (click)="setType('Camera')">Cameras</a>
+        </li>      
+    </ul>
+
+</nav>
+
+<nav class="navbar__alternate bg-dark">
+    <div class="logo__mobile">
+        <img src="assets/img/mobile.png">
+    </div>
+    <ul class="navbar__catalog">
+        <li routerLinkActive = "active">
+            <a (click)="setType('Mobile')">
+                <i class="material-icons">smartphone</i>
+            </a>
+        </li>
+        <li routerLinkActive = "active">
+            <a (click)="setType('Laptop')">
+                <i class="material-icons">laptop</i>
+            </a>
+        </li>
+        <li routerLinkActive = "active">
+            <a (click)="setType('Notebook')">
+                <i class="material-icons">tablet_mac</i>
+            </a>
+        </li>
+        <li routerLinkActive = "active">
+            <a (click)="setType('Camera')">
+                <i class="material-icons">photo_camera</i>
+            </a>
+        </li>      
+    </ul>
+</nav>
+
+
+
+
+<div class="container">   
+    <router-outlet></router-outlet>
+</div>
+

@@ -1,0 +1,42 @@
+<div *ngIf="form">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+    
+        <h2 class="text-center">Update product</h2>
+    
+        <div class="form-control">
+            <label for="type">Type</label>
+            <select formControlName="type">
+                <option value="Mobile">Mobile</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Notebook">Notebook</option>
+                <option value="Camera">Camera</option>
+            </select>
+  
+        </div>
+        <div class="form-control">
+            <label for="title">Name</label>
+            <input id="title" type="title" formControlName="title">
+
+        </div>
+        <div class="form-control">
+            <label for="type">Image</label>
+            <quill-editor formControlName="image"></quill-editor>
+           
+        </div>
+        <div class="form-control">
+            <label for="type">Information</label>
+            <quill-editor formControlName="description"></quill-editor>
+          
+        </div>
+        <div class="form-control">
+            <label for="price">Price</label>
+            <input id="price" type="price" formControlName="price">
+          
+        </div>
+    
+    
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid || submited">Update</button>
+        
+    
+    </form>
+    </div>

@@ -1,0 +1,14 @@
+<div class="item">
+    <div class="text-center box">
+        {{product.title}}
+        <div class="flex-center">
+            <quill-view-html [content]="product.image"></quill-view-html>
+        </div>
+    
+        <h2>
+            ${{product.price}}
+        </h2>
+        <button [routerLink]="['/product',product.id]" class="btn btn-dark">Open</button>
+    </div>
+    
+</div>

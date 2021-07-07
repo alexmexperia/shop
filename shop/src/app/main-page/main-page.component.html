@@ -1,0 +1,6 @@
+<div *ngIf="products$" class="dashboard">
+    <div class="list">
+        <app-product *ngFor="let product of products$ | sorting: productService.type" [product]="product">
+        </app-product>
+    </div>      
+</div>
